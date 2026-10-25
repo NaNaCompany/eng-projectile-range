@@ -1,0 +1,59 @@
+{
+  "id": "E062",
+  "slug": "eng-projectile-range",
+  "title": "경사 투사 도달거리 계산기",
+  "title_en": "Projectile Range Calculator",
+  "category": "역학",
+  "category_en": "Mechanics",
+  "fields": [
+    {
+      "key": "v",
+      "label": "초기 속력 v₀",
+      "label_en": "Initial speed v₀",
+      "dimension": "speed",
+      "example": 10,
+      "constraint": "nonnegative",
+      "display_unit": "ms",
+      "display_value": "10"
+    },
+    {
+      "key": "theta",
+      "label": "수평 기준 발사각 θ",
+      "label_en": "Launch angle from horizontal θ",
+      "dimension": "angle",
+      "example": 0.7853981633974483,
+      "constraint": "quarterTurn",
+      "display_unit": "deg",
+      "display_value": "45"
+    },
+    {
+      "key": "g",
+      "label": "중력가속도 g",
+      "label_en": "Gravitational acceleration g",
+      "dimension": "acceleration",
+      "example": 10,
+      "constraint": "positive",
+      "display_unit": "ms2",
+      "display_value": "10"
+    }
+  ],
+  "result_label": "동일 높이 수평 도달거리 R",
+  "result_label_en": "Same-height horizontal range R",
+  "result_dimension": "length",
+  "formula": "R = v₀² sin(2θ)/g",
+  "purpose": "같은 높이로 돌아오는 이상적인 포물선 투사 거리 계산",
+  "purpose_en": "Calculate ideal projectile range when launch and landing heights match.",
+  "assumptions": "v₀≥0, g>0, 0≤θ≤90°. 발사점·착지점 높이가 같고 중력이 일정하며 공기저항·양력은 없다. 최대 사거리 최적화나 실제 발사체 설계는 계산하지 않는다.",
+  "assumptions_en": "Required: v₀≥0, g>0, 0≤θ≤90° and equal launch and landing heights in uniform gravity. Excluded: air resistance and lift. Only one range value is returned.",
+  "sources": [
+    {
+      "label": "OpenStax · 4 3 projectile motion",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-projectile-range/",
+  "repository": "https://github.com/NaNaCompany/eng-projectile-range",
+  "output_unit": "m"
+}
